@@ -16,15 +16,15 @@ class Logger {
 
 }
 
-class Singlton{
-    constructor(){
-        if(!Singlton.instace){
-            Singlton.instace=new Logger()
-        }
-    }
-    getInstance(){
-        return Singlton.instace
-    }
-}
+// class Singlton{
+//     constructor(){
+//         if(!Singlton.instace){
+//             Singlton.instace=new Logger()
+//         }
+//     }
+//     getInstance(){
+//         return Singlton.instace
+//     }
+// }
 
-module.exports = Singlton;
+module.exports = new Logger();
