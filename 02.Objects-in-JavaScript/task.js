@@ -5,16 +5,26 @@ const task={
     description:'task 1 description'
 }
 
-////create object with dot notaion 
-//const task=Object.create(Object.prototype)
 
-////create object with new
-//const task=new Object()
-// task.title='Task 1'
-// task.description='task 1 description'
-task.tostring=function () {
-    return this.title+' & '+this.description
-}
+Object.defineProperty(task,'tostring',{
+   value: function () {
+        return this.title+' & '+this.description
+    },
+    writable:false,
+    enumerable:false,
+    configurable:true
+    
+})
+const urgentTask=Object.create(task)
 
+Object.defineProperty(urgentTask,'tostring',{
+    value: function () {
+         return this.title+' & '+this.description
+     },
+     writable:false,
+     enumerable:false,
+     configurable:true
+     
+ })
 
-console.log(task.tostring());
+console.log(urgentTask.tostring());
