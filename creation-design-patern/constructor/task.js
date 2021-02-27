@@ -20,4 +20,4 @@ var task4=new Task('create demo for prototypes')
 
 
 task1.complete()
-task2.save()
+task2 .save()
