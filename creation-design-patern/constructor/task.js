@@ -14,11 +14,4 @@ Task.prototype.save=function (params) {
     console.log('the task '+this.name+' is saved');
 }
 
-var task1=new Task('create demo for constructor')
-var task2=new Task('create demo for modules')
-var task3=new Task('create demo for singltons')
-var task4=new Task('create demo for prototypes')
-
-
-task1.complete()
-task2 .save()
+module.exports =Task
