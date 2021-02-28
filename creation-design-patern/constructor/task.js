@@ -3,14 +3,15 @@ var Task=function (name) {
     this.completed=false
 
 
-    this.complete=function () {
-        console.log('the task '+this.name+' is completed');
-        this.completed=true
-       
-    }
-    this.save=function (params) {
-        console.log('the task '+this.name+' is saved');
-    }
+
+}
+
+Task.prototype.complete=function (params) {
+    console.log('the task '+this.name+' is completed');
+    this.completed=true
+}
+Task.prototype.save=function (params) {
+    console.log('the task '+this.name+' is saved');
 }
 
 var task1=new Task('create demo for constructor')
@@ -20,4 +21,4 @@ var task4=new Task('create demo for prototypes')
 
 
 task1.complete()
-task2.save()
+task2 .save()
